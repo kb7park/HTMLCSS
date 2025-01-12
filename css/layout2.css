@@ -9,6 +9,28 @@ div.header>div.headerGrid>h1{}
 div.header>div.headerGrid>ul{}
 div.header>div.headerGrid>ul>li{}
 
+/* 공통: 구조가 겹치는 태그들을
+전체적으로 한번씩 선택해준다.
+이유는 한번에 공통적으로 수정할 스타일을 위해서 */
+div.content{}
+div.content>div.contentGrid{}
+div.content>div.contentGrid>div.header{}
+div.content>div.contentGrid>div.header>h2{}
+div.content>div.contentGrid>div.section{}
+div.content>div.contentGrid>div.section div.article{
+    background-color: #1e06f0;
+}
+div.content>div.contentGrid>div.section>div.article>img{}
+div.content>div.contentGrid>div.section>div.article>div.texts{}
+div.content>div.contentGrid>div.section>div.article>div.texts>h3{}
+div.content>div.contentGrid>div.section>div.article>div.texts>h4{}
+div.content>div.contentGrid>div.section>div.article>div.texts>p{}
+
+
+
+
+
+
 /* 컨텐츠1 */
 div.contents.cnt1{}
 div.contents.cnt1>div.contentGrid{}
@@ -26,9 +48,9 @@ div.contents.cnt1>div.contentGrid>div.section>div.artTop>div.article>div.text>di
 div.contents.cnt1>div.contentGrid>div.section>div.artTop>div.article>div.text>div.icons>i{}
 div.contents.cnt1>div.contentGrid>div.section>div.artBottom{}
 div.contents.cnt1>div.contentGrid>div.section>div.artBottom>div.article{}
-div.contents.cnt1>div.contentGrid>div.section>div.artBottom>div.article>div.texts{}
-div.contents.cnt1>div.contentGrid>div.section>div.artBottom>div.article>div.texts>div.icons{}
-div.contents.cnt1>div.contentGrid>div.section>div.artBottom>div.article>div.texts>div.icons>i{}
+div.contents.cnt1>div.contentGrid>div.section>div.artBottom>div.article>div.img{}
+div.contents.cnt1>div.contentGrid>div.section>div.artBottom>div.article>div.img>div.texts{}
+div.contents.cnt1>div.contentGrid>div.section>div.artBottom>div.article>div.img>div.texts{}
 div.contents.cnt2{}
 div.contents.cnt2>div.contentGrid{}
 div.contents.cnt2>div.contentGrid>div.header{}
