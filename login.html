@@ -6,12 +6,28 @@
     <title>login</title>
 </head>
 <body>
-    <form action="앞으로 갈 경로">
-        <label for="">아이디:</label><input type="text" name="" id="">
+    <form action="./layout2.html">
+        <label for="id">아이디:</label>
+        <input type="text" name="" id="id" placeholder="아이디를 입력해주세요!">
         <br>
-        <label for="">비밀번호:</label><input type="password" name="" password="">
+        <label for="password">비밀번호:</label>
+        <input type="password" name="" password="password">
         <br>
-        <input type="submit" value="로그인">    
+        <!-- 체크박스 -->
+        <label for="save">아이디 저장</label>
+        <input type="checkbox" id="save" checked>
+        <!-- 학생인지 아닌지 둘중의 하나는 반드시 선택해야함 -->
+        <label for="stu">학생</label> <input type="radio" name="cat" id="stu" checked>
+        <label for="pe">일반인</label> <input type="radio" name="cat" id="pe">
+        <br>
+        <select>
+            <option value="">선택값 1</option>
+            <option value="">선택값 2</option>
+            <option value="">선택값 3</option>
+        </select>
+
+
+        <input type="submit" value="로그인">
     </form>
 </body>
 </html>
