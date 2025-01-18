@@ -1,28 +1,96 @@
+@import url('./reset.css');
+
+
 /* 헤더탑 */
-div.hdrTop{}
-div.hdrTop>div.hdrTopGrid{}
-div.hdrTop>div.hdrTopGrid>i{}
+div.hdrTop{
+    /* 숫자 컬러는 앞에 반드시 #붙일 것! */
+    background-color: #212517;
+}
+div.hdrTop>div.hdrTopGrid{
+    /* 속성명: 속성값; */
+    /* 가로: 80% */
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    text-align: center;
+    /* 크기 단위는 px, %, vw(viewport 가로), vh(viewport 높이), em(폰트사이즈), rem*/
+}
+div.hdrTop>div.hdrTopGrid>i{
+    font-size: 35px;
+    line-height: 40px;
+}
 
 /* 헤더 */
-div.header{}
-div.header>div.headerGrid{}
-div.header>div.headerGrid>h1{}
-div.header>div.headerGrid>ul{}
-div.header>div.headerGrid>ul>li{}
+div.headerWrap{
+    background-color: #a31f30;
+}
+div.headerWrap>div.header{
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+div.headerWrap>div.header>h1{
+    line-height: 80px;
+    font-size: 25px;
+}
+div.headerWrap>div.header>ul{
+    display: flex;
+    column-gap: 10px;
+}
+div.headerWrap>div.header>ul>li{
+    line-height: 80px;
+    font-size: 20px;
+}
 
 /* 컨텐트 */
-div.content{}
-div.content>div.contentGrid{}
+div.content{
+    margin-top: 80px;
+}
+div.content>div.contentGrid{
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
 div.content>div.contentGrid>div.header{}
-div.content>div.contentGrid>div.header>h2{}
-div.content>div.contentGrid>div.header>p{}
-div.content>div.contentGrid>div.section{}
+div.content>div.contentGrid>div.header>h2{
+    line-height: 80px;
+    font-size: 40px;
+    text-align: center;
+}
+div.content>div.contentGrid>div.header>p{
+    height: 40px; 
+    font-size: 12px;
+    line-height: 20px;
+    width: calc(100% / 12 * 6);
+    margin: 0 auto;
+    overflow: hidden;
+    text-align: center;
+}
+div.content>div.contentGrid>div.section{
+    margin-top: 40px;
+}
 div.content>div.contentGrid>div.section  div.article{}
-div.content>div.contentGrid>div.section  div.article>img{}
+div.content>div.contentGrid>div.section  div.article>img{
+    display: block;
+    background-color: #ccc;
+}
 div.content>div.contentGrid>div.section  div.article>div.texts{}
-div.content>div.contentGrid>div.section  div.article>div.texts>h3{}
-div.content>div.contentGrid>div.section  div.article>div.texts>h4{}
-div.content>div.contentGrid>div.section  div.article>div.texts>p{}
+div.content>div.contentGrid>div.section  div.article>div.texts>h3{
+    font-size: 25px;
+    line-height: 40px;
+}
+div.content>div.contentGrid>div.section  div.article>div.texts>h4{
+    font-size: 14px;
+    line-height: 40px;
+}
+div.content>div.contentGrid>div.section  div.article>div.texts>p{
+    height: 80px;
+    line-height: 20px;
+    font-size: 12px;
+    overflow: hidden;
+}
 div.content>div.contentGrid>div.section  div.article>div.texts>i{}
 
 /* 컨텐트1 */
@@ -32,38 +100,70 @@ div.content.cnt1>div.contentGrid>div.header{}
 div.content.cnt1>div.contentGrid>div.header>h2{}
 div.content.cnt1>div.contentGrid>div.header>p{}
 div.content.cnt1>div.contentGrid>div.section{}
-div.content.cnt1>div.contentGrid>div.section>artTop{}
-div.content.cnt1>div.contentGrid>div.section>artTop>article{}
-div.content.cnt1>div.contentGrid>div.section>artTop>article>img{}
-div.content.cnt1>div.contentGrid>div.section>artTop>article>div.texts{}
-div.content.cnt1>div.contentGrid>div.section>artTop>article>texts>h3{}
-div.content.cnt1>div.contentGrid>div.section>artTop>article>texts>h4{}
-div.content.cnt1>div.contentGrid>div.section>artTop>article>texts>p{}
-div.content.cnt1>div.contentGrid>div.section>artTop>article>texts>div.icons{}
-div.content.cnt1>div.contentGrid>div.section>artTop>article>texts>icons>i{}
-div.content.cnt1>div.contentGrid>div.section>div.artBottom{}
+div.content.cnt1>div.contentGrid>div.section>div.artTop{
+    display: flex;
+    column-gap: 20px;
+}
+div.content.cnt1>div.contentGrid>div.section>div.artTop>div.article{}
+div.content.cnt1>div.contentGrid>div.section>div.artTop>div.article>img{
+    height: 320px;
+
+}
+div.content.cnt1>div.contentGrid>div.section>div.artTop>div.article>div.texts{}
+div.content.cnt1>div.contentGrid>div.section>div.artTop>div.article>texts>h3{}
+div.content.cnt1>div.contentGrid>div.section>div.artTop>div.article>texts>h4{}
+div.content.cnt1>div.contentGrid>div.section>div.artTop>div.article>texts>p{}
+div.content.cnt1>div.contentGrid>div.section>div.artTop>div.article>texts>div.icons{}
+div.content.cnt1>div.contentGrid>div.section>div.artTop>div.article>texts>div.icons>i{}
+div.content.cnt1>div.contentGrid>div.section>div.artBottom{
+    display: flex;
+    column-gap: 20px;
+}
 div.content.cnt1>div.contentGrid>div.section>div.artBottom>div.article{}
-div.content.cnt1>div.contentGrid>div.section>div.artBottom>div.article>img{}
+div.content.cnt1>div.contentGrid>div.section>div.artBottom>div.article>img{
+    height: 320px;
+}
 div.content.cnt1>div.contentGrid>div.section>div.artBottom>div.article>texts{}
 div.content.cnt1>div.contentGrid>div.section>div.artBottom>div.article>texts>h3{}
 div.content.cnt1>div.contentGrid>div.section>div.artBottom>div.article>texts>p{}
-div.content.cnt1>div.contentGrid>div.section>div.artBottom>div.article>texts>icons{}
-div.content.cnt1>div.contentGrid>div.section>div.artBottom>div.article>texts>icons>i{}
+div.content.cnt1>div.contentGrid>div.section>div.artBottom>div.article>texts>div.icons{}
+div.content.cnt1>div.contentGrid>div.section>div.artBottom>div.article>texts>div.icons>i{}
 
 /* 컨텐트2 */
 div.content.cnt2{}
-div.content.cnt2>div.contentGrid{}
-div.content.cnt2>div.contentGrid>div.header{}
+div.content.cnt2>div.contentGrid{
+    width: 100%;
+}
+div.content.cnt2>div.contentGrid>div.header{
+    background-color: #f00;
+    padding-top: 80px;
+    padding-bottom: 320px;
+}
 div.content.cnt2>div.contentGrid>div.header>h2{}
 div.content.cnt2>div.contentGrid>div.header>p{}
-div.content.cnt2>div.contentGrid>div.section{}
-div.content.cnt2>div.contentGrid>div.section>div.article{}
-div.content.cnt2>div.contentGrid>div.section>div.article>i{}
-div.content.cnt2>div.contentGrid>div.section>div.article>text{}
-div.content.cnt2>div.contentGrid>div.section>div.article>text>h3{}
-div.content.cnt2>div.contentGrid>div.section>div.article>text>h4{}
-div.content.cnt2>div.contentGrid>div.section>div.article>text>p{}
-div.content.cnt2>div.contentGrid>div.section>div.article>text>button{}
+div.content.cnt2>div.contentGrid>div.section{
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: calc(40px * -7);
+}
+div.content.cnt2>div.contentGrid>div.section>div.article{
+    display: flex;
+}
+div.content.cnt2>div.contentGrid>div.section>div.article>img{
+    width: 50%;
+    height: 440px;
+    display: block;
+    background-color: #ccc;
+}
+div.content.cnt2>div.contentGrid>div.section>div.article>texts{
+    width: 50%;
+    background-color: #fff;
+}
+div.content.cnt2>div.contentGrid>div.section>div.article>texts>h3{}
+div.content.cnt2>div.contentGrid>div.section>div.article>texts>h4{}
+div.content.cnt2>div.contentGrid>div.section>div.article>texts>p{}
+div.content.cnt2>div.contentGrid>div.section>div.article>texts>button{}
 
 /* 컨텐트3 */
 div.content.cnt3{}
@@ -71,17 +171,45 @@ div.content.cnt3>div.contentGrid{}
 div.content.cnt3>div.contentGrid>div.header{}
 div.content.cnt3>div.contentGrid>div.header>h2{}
 div.content.cnt3>div.contentGrid>div.header>p{}
-div.content.cnt3>div.contentGrid>div.section{}
-div.content.cnt3>div.contentGrid>div.section>div.article{}
-div.content.cnt3>div.contentGrid>div.section>div.article>img{}
+div.content.cnt3>div.contentGrid>div.section{
+    display: flex;
+}
+div.content.cnt3>div.contentGrid>div.section>div.article{
+    width: 25%;
+}
+div.content.cnt3>div.contentGrid>div.section>div.article>img{
+    display: block;
+    width: 100%;
+    height: 200px;
+}
 div.content.cnt3>div.contentGrid>div.section>div.article>div.texts{}
 div.content.cnt3>div.contentGrid>div.section>div.article>div.texts>h3{}
 div.content.cnt3>div.contentGrid>div.section>div.article>div.texts>p{}
 
 /* 푸터 */
-div.footer{}
-div.footer>div.footerGrid{}
-div.footer>div.footerGrid>h4{}
-div.footer>div.footerGrid>p{}
-div.footer>div.footerGrid>div.sns{}
-div.footer>div.footerGrid>div.sns>i{}
+div.footer{
+    background-color: #A31F30;
+    margin-top: 80px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+div.footer>div.footerGrid{
+    width: 80%;
+    max-width: 1080px;
+    margin: 0 auto;
+}
+div.footer>div.footerGrid>h4{
+    line-height: 80px;
+    font-size: 30px;
+}
+div.footer>div.footerGrid>p{
+    height: 40px;
+    line-height: 20px;
+    font-size: 12px;
+}
+div.footer>div.footerGrid>div.sns{
+    line-height: 80px;
+    height: 40px;
+}
+div.footer>div.footerGrid>div.sns>i{
+}
