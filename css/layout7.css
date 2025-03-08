@@ -6,11 +6,29 @@ div.hdrTop>div.hdrTopGrid{
     width: 80%;
     max-width: 1080px;
     margin: 0 auto;
-    text-align: center;
+    line-height: 40px;
+    font-size: 35px;
+    color: #fff;
+    overflow: hidden;
 }
 div.hdrTop>div.hdrTopGrid>i{
-    font-size: 35px;
-    line-height: 40px;
+    display: block;
+    animation:move 8s linear infinite;
+}
+/* 에니메이션을 만드는 애 */
+/* 작업시간이 n%일때, 어떤 css를 보여주는지 설정할수 있다. */
+/* 애니메이션 이름 */
+/* 헤더 */
+@keyframes move {
+    /*시작할때*/
+    0%{
+        /* 해당 선택자에 적용할 속성 */
+        margin-left: 0%;
+    }
+    /* 완료 */
+    100%{
+        margin-left: 120%;
+    }
 }
 /* 헤더 */
 div.headerWrap{
@@ -21,19 +39,25 @@ div.headerWrap>div.header{
     max-width: 1080px;
     margin: 0 auto;
     display: flex;
+    color: #fff;
+    text-transform: capitalize;
     justify-content: space-between;
+    line-height: 80px;
+    font-weight: 700;
 }
 div.headerWrap>div.header>h1{
-    line-height: 80px;
     font-size: 25px;
 }
 div.headerWrap>div.header>ul{
     display: flex;
     column-gap: 10px;
-}
-div.headerWrap>div.header>ul>li{
-    line-height: 80px;
     font-size: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+div.headerWrap>div.header>ul>li:nth-of-type(4){
+    display: none;
 }
 /* 컨텐츠 */
 div.content{
@@ -48,13 +72,15 @@ div.content>div.contentGrid>div.header>h2{
     line-height: 80px;
     font-size: 40px;
     text-align: center;
+    text-transform: capitalize;
+    font-weight: 700;
 }
 div.content>div.contentGrid>div.header>p{
-    height: 40px;
-    font-size: 12px;
-    line-height: 20px;
     width: calc(100% / 12*6);
     margin: 0 auto;
+    font-size: 12px;
+    height: 40px;
+    line-height: 20px;
     overflow: hidden;
     text-align: center;
 }
