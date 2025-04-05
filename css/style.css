@@ -51,17 +51,37 @@
   font-size: 48px;
 }
 
-div.frame>div.slide>div.overlap-group>div.searchbar{
+div.frame>div.slide>div.overlap-group>div.searchbar {
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 539px;
   height: 70px;
   top: 292px;
   left: 334px;
-  border-radius: 50px;
+  border: 2px solid #ccc;
+  border-radius: 9999px;
+  /* 🔍 타원형 모양의 핵심 */
+  padding: 0 16px;
+  background-color: transparent;
 }
 
+div.frame>div.slide>div.overlap-group>div.searchbar>input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 30px;
+  padding-left: 10px;
+  background: transparent;
+}
 
-div.frame>div.slide>div.overlap-group>div.icons{
+div.frame>div.slide>div.overlap-group>div.searchbar>i {
+  color: #888;
+  font-size: 26px;
+}
+
+div.frame>div.slide>div.overlap-group>div.icons {
   position: absolute;
   bottom: 50px;
   /* 아래에서 50px */
@@ -73,7 +93,7 @@ div.frame>div.slide>div.overlap-group>div.icons{
   color: white;
 }
 
-div.frame>div.slide>div.overlap-group>div.icons>i{
+div.frame>div.slide>div.overlap-group>div.icons>i {
   font-size: 33px;
   cursor: pointer;
 }
@@ -95,7 +115,7 @@ div.frame>div.slide>div.overlap-group>div.icons>i{
   left: 70px;
 }
 
-div.frame>div.slide>div.overlap-group>div.div>i{
+div.frame>div.slide>div.overlap-group>div.div>i {
   position: absolute;
   font-size: 31px;
   line-height: 38px;

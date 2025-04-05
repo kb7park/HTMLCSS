@@ -1,0 +1,207 @@
+.k-league-teams .overlap-group {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+}
+
+.k-league-teams .kleague-jpg {
+  position: absolute;
+  width: 1920px;
+  height: 1080px;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.k-league-teams .footer {
+  position: absolute;
+  width: 1920px;
+  height: 176px;
+  top: 904px;
+  left: 0;
+  background-color: transparent;
+}
+
+.k-league-teams .icons {
+  position: absolute;
+  width: 242px;
+  height: 38px;
+  top: 113px;
+  left: 752px;
+}
+
+.k-league-teams .element-lorem {
+  position: absolute;
+  width: 256px;
+  height: 56px;
+  top: 37px;
+  left: 756px;
+  font-family: "Lato-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+.k-league-teams .content {
+  position: absolute;
+  width: 700px;
+  height: 744px;
+  top: 160px;
+  left: 600px;
+  background-image: url(./img/map.png);
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+.k-league-teams .header {
+  position: absolute;
+  width: 1920px;
+  height: 160px;
+  top: 0;
+  left: 0;
+  background-color: transparent;
+}
+
+.k-league-teams .div {
+  position: absolute;
+  width: 1471px;
+  height: 55px;
+  top: 53px;
+  left: 320px;
+}
+
+.k-league-teams .frame {
+  display: flex;
+  flex-direction: column;
+  width: 50px;
+  align-items: flex-start;
+  top: 0;
+  left: 1421px;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+}
+
+div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.div>divframe>i{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 2px;
+  position: relative;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+}
+
+.k-league-teams .group {
+  position: relative;
+  width: 26px;
+  height: 22px;
+  margin-top: -1.00px;
+  margin-bottom: -1.00px;
+  margin-left: -1.00px;
+}
+
+.k-league-teams .information-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  top: 7px;
+  left: 985px;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+}
+
+.k-league-teams .text-wrapper {
+  position: relative;
+  width: fit-content;
+  margin-top: -1.00px;
+  font-family: "Lato-SemiBold", Helvetica;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 0;
+  line-height: 28px;
+  white-space: nowrap;
+}
+
+.k-league-teams .about-players-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  top: 7px;
+  left: 735px;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+}
+
+.k-league-teams .k-league-teams-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  top: 7px;
+  left: 480px;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+}
+
+.k-league-teams .div-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  top: 7px;
+  left: 255px;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+}
+
+.k-league-teams .footall-footprints-wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  top: 2px;
+  left: 0;
+  gap: 10px;
+  padding: 10px;
+  position: absolute;
+}
+
+.k-league-teams .h {
+  position: absolute;
+  width: 178px;
+  height: 94px;
+  top: 33px;
+  left: 69px;
+}
+
+div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>i{
+  position: absolute;
+  font-size: 31px;
+  line-height: 38px;
+  width: 38px;
+  height: 38px;
+  top: 28px;
+  left: 0;
+  color: white;
+}
+
+.k-league-teams .text-wrapper-2 {
+  position: absolute;
+  width: 120px;
+  top: 0;
+  left: 56px;
+  font-family: "Philosopher-Bold", Helvetica;
+  font-weight: 700;
+  color: #ffffff;
+  font-size: 30px;
+  letter-spacing: 0;
+  line-height: normal;
+}
