@@ -1,3 +1,8 @@
+div.k-league-teams{
+  position: relative;
+  width:1920px;
+  height: 1080px;
+}
 .k-league-teams .overlap-group {
   position: relative;
   width: 1920px;
@@ -24,10 +29,14 @@
 
 .k-league-teams .icons {
   position: absolute;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 242px;
   height: 38px;
   top: 113px;
   left: 752px;
+  color:white;
 }
 
 .k-league-teams .element-lorem {
@@ -45,15 +54,14 @@
   line-height: 28px;
 }
 
-.k-league-teams .content {
+div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content{
   position: absolute;
-  width: 700px;
-  height: 744px;
+  width: 1920px;
+  height: 750px;
   top: 160px;
-  left: 600px;
-  background-image: url(./img/map.png);
-  background-size: cover;
-  background-position: 50% 50%;
+  /* background-image: url(./img/map.png); */
+  /* background-size: cover; */
+  /* background-position: 50% 50%; */
 }
 
 .k-league-teams .header {
