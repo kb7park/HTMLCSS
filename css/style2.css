@@ -21,8 +21,8 @@ div.k-league-teams{
 .k-league-teams .footer {
   position: absolute;
   width: 1920px;
-  height: 176px;
-  top: 904px;
+  height: 170px;
+  top: 910px;
   left: 0;
   background-color: transparent;
 }
@@ -53,15 +53,15 @@ div.k-league-teams{
   letter-spacing: 0;
   line-height: 28px;
 }
-
 div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content{
   position: absolute;
   width: 1920px;
   height: 750px;
   top: 160px;
-  /* background-image: url(./img/map.png); */
-  /* background-size: cover; */
-  /* background-position: 50% 50%; */
+  display: flex;
+  justify-content: center; /* 가로 중앙 */
+  align-items: center;      /* 세로 중앙 */
+  height: 100vh;            /* 화면 전체 높이 */
 }
 
 .k-league-teams .header {
@@ -79,6 +79,9 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content{
   height: 55px;
   top: 53px;
   left: 320px;
+
+  display: flex;
+  justify-content: space-between;
 }
 
 .k-league-teams .frame {
@@ -122,7 +125,7 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
   left: 985px;
   gap: 10px;
   padding: 10px;
-  position: absolute;
+  /* position: absolute; */
 }
 
 .k-league-teams .text-wrapper {
@@ -146,7 +149,6 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
   left: 735px;
   gap: 10px;
   padding: 10px;
-  position: absolute;
 }
 
 .k-league-teams .k-league-teams-wrapper {
@@ -157,7 +159,6 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
   left: 480px;
   gap: 10px;
   padding: 10px;
-  position: absolute;
 }
 
 .k-league-teams .div-wrapper {
@@ -168,7 +169,6 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
   left: 255px;
   gap: 10px;
   padding: 10px;
-  position: absolute;
 }
 
 .k-league-teams .footall-footprints-wrapper {
@@ -179,7 +179,6 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
   left: 0;
   gap: 10px;
   padding: 10px;
-  position: absolute;
 }
 
 .k-league-teams .h {
