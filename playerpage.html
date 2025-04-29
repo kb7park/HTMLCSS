@@ -1,139 +1,28 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="./css/globals2.css" />
-    <link rel="stylesheet" href="./css/style2.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
     <link rel="stylesheet" href="./css/all.min.css">
-    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ece1495bb892f84bb6791401ee1157d0">
-    </script>
 </head>
-
 <body>
-    <div class="k-league-teams">
-        <div class="overlap-group-wrapper">
-            <div class="overlap-group">
-                <img class="kleague-jpg" src="images/kleague.png" />
-                <div class="header">
-                    <div class="div">
-                        <div class="information-wrapper">
-                            <div class="text-wrapper">Information</div>
-                        </div>
-                        <div class="about-players-wrapper">
-                            <div class="text-wrapper">About Players</div>
-                        </div>
-                        <div class="k-league-teams-wrapper">
-                            <div class="text-wrapper">K League Teams</div>
-                        </div>
-                        <div class="div-wrapper">
-                            <div class="text-wrapper">1945~2025</div>
-                        </div>
-                        <div class="footall-footprints-wrapper">
-                            <div class="text-wrapper">Footall Footprints</div>
-                        </div>
-                    </div>
-                    <div class="h">
-                        <i class="fa-solid fa-futbol"></i>
-                        <div class="text-wrapper-2">Korea Football Guide</div>
-                    </div>
-                </div>
-                <div class="content">
-                    <div id="map" style="width:50%; height: 600px; margin: 0 auto;"></div>
-                </div>
-                <div class="footer">
-                    <div class="element-lorem">연락처:010-1234-5678<br />이메일:lorem</div>
-                    <div class="icons">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-youtube"></i>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="header">
+        <h1>
+            <i class="fa-solid fa-futbol"></i>
+        </h1>
+        <h3>
+            <p>Football print</p>
+            <p>1945~2025</p>
+            <p>K League teams</p>
+            <p>About players</p>
+            <p>Information</p>
+        </h3>
+        <button>
+            <i class="fa-solid fa-bars"></i>
+        </button>
     </div>
-    <script>
-        var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
-            mapOption = {
-                center: new kakao.maps.LatLng(35.75, 128.15), // 지도의 중심좌표
-                level: 13 // 지도의 확대 레벨
-            };
-
-        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
-
-        // 마커를 표시할 위치와 title 객체 배열입니다 
-        var positions = [{
-                title: '서울상암월드컵경기장',
-                latlng: new kakao.maps.LatLng(37.5683, 126.8972)
-            },
-            {
-                title: '울산문수경기장',
-                latlng: new kakao.maps.LatLng(35.5354, 129.2597)
-            },
-            {
-                title: '전북전주월드컵경기장',
-                latlng: new kakao.maps.LatLng(35.8668, 127.1266)
-            },
-            {
-                title: '포항스틸야드경기장',
-                latlng: new kakao.maps.LatLng(36.0190, 129.3435)
-            },
-            {
-                title: '수원종합운동장',
-                latlng: new kakao.maps.LatLng(37.2860, 127.0156)
-            },
-            {
-                title: 'DGB대구은행파크',
-                latlng: new kakao.maps.LatLng(35.8804, 128.5856)
-            },
-            {
-                title: '대전월드컵경기장',
-                latlng: new kakao.maps.LatLng(36.3216, 127.4289)
-            },
-            {
-                title: '광주축구전용구장',
-                latlng: new kakao.maps.LatLng(35.1333, 126.9020)
-            },
-            {
-                title: '춘천송암레포츠타운',
-                latlng: new kakao.maps.LatLng(37.8478, 127.7144)
-            },
-            {
-                title: '제주월드컵경기장',
-                latlng: new kakao.maps.LatLng(33.2463, 126.5097)
-            },
-            {
-                title: '안양종합운동장',
-                latlng: new kakao.maps.LatLng(37.4053, 126.9466)
-            },
-            {
-                title: '김천종합운동장',
-                latlng: new kakao.maps.LatLng(36.1397, 128.0865)
-            },
-
-        ];
-
-        // 마커 이미지의 이미지 주소입니다
-        var imageSrc = "https://t1.daumcdn.net/localimg/localimages/07/mapapidoc/markerStar.png";
-
-        for (var i = 0; i < positions.length; i++) {
-
-            // 마커 이미지의 이미지 크기 입니다
-            var imageSize = new kakao.maps.Size(40, 40);
-
-            // 마커 이미지를 생성합니다    
-            var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize);
-
-            // 마커를 생성합니다
-            var marker = new kakao.maps.Marker({
-                map: map, // 마커를 표시할 지도
-                position: positions[i].latlng, // 마커를 표시할 위치
-                title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
-                image: markerImage // 마커 이미지 
-            });
-        }
-    </script>
+    <div class="content"></div>
+    <div class="footer"></div>
 </body>
-
 </html>
