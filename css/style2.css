@@ -1,8 +1,9 @@
-div.k-league-teams{
+div.k-league-teams {
   position: relative;
-  width:1920px;
+  width: 1920px;
   height: 1080px;
 }
+
 .k-league-teams .overlap-group {
   position: relative;
   width: 1920px;
@@ -36,7 +37,7 @@ div.k-league-teams{
   height: 38px;
   top: 113px;
   left: 752px;
-  color:white;
+  color: white;
 }
 
 .k-league-teams .element-lorem {
@@ -53,15 +54,19 @@ div.k-league-teams{
   letter-spacing: 0;
   line-height: 28px;
 }
-div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content{
+
+div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content {
   position: absolute;
   width: 1920px;
   height: 750px;
   top: 160px;
   display: flex;
-  justify-content: center; /* 가로 중앙 */
-  align-items: center;      /* 세로 중앙 */
-  height: 100vh;            /* 화면 전체 높이 */
+  justify-content: center;
+  /* 가로 중앙 */
+  align-items: center;
+  /* 세로 중앙 */
+  height: 100vh;
+  /* 화면 전체 높이 */
 }
 
 .k-league-teams .header {
@@ -96,7 +101,7 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content{
   position: absolute;
 }
 
-div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.div>div.frame>i{
+div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.div>div.frame>i {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -189,7 +194,7 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
   left: 69px;
 }
 
-div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>i{
+div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>i {
   position: absolute;
   font-size: 31px;
   line-height: 38px;
@@ -212,7 +217,8 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>
   letter-spacing: 0;
   line-height: normal;
 }
- /* 모달 전체 배경 및 중앙화 */
+
+/* 모달 전체 배경 및 중앙화 */
 .modal {
   display: none;
   position: fixed;
