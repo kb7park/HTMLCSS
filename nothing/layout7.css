@@ -111,61 +111,61 @@ div.content>div.contentGrid>div.section div.article>div.texts>p{
     overflow: hidden;
 }
 /* 컨텐츠1 */
-div.content cnt1>div.contentGrid>div.section>artTop{
+div.content.cnt1>div.contentGrid>div.section>artTop{
     display: flex;
     column-gap: 20px;
 }
-div.content cnt1>div.contentGrid>div.section>artTop>div.article>img{
+div.content.cnt1>div.contentGrid>div.section>artTop>div.article>img{
     height: 320px;
 }
-div.content cnt1>div.contentGrid>div.section>artBottom{
+div.content.cnt1>div.contentGrid>div.section>artBottom{
     display: flex;
     column-gap: 20px;
     margin-top: 40px;
 }
-div.content cnt1>div.contentGrid>div.section>artBottom>div.article>img{
+div.content.cnt1>div.contentGrid>div.section>artBottom>div.article>img{
     height: 320px;
 }
 /* 컨텐츠2 */
-div.content cnt2>div.contentGrid{
+div.content.cnt2>div.contentGrid{
     width: 100%;
     max-width: none;
 }
-div.content cnt2>div.contentGrid>div.header{
+div.content.cnt2>div.contentGrid>div.header{
     background-color: #f00;
     padding-top: 80px;
     padding-bottom: calc(40px * 8);
 }
-div.content cnt2>div.contentGrid>div.section{
+div.content.cnt2>div.contentGrid>div.section{
     width: 80%;
     max-width: 1080px;
     margin: 0 auto;
     margin-top: calc(40px * -7);
 }
-div.content cnt2>div.contentGrid>div.section>div.article{
+div.content.cnt2>div.contentGrid>div.section>div.article{
     display: flex;
     box-shadow: 4px 4px 8px rgba(0,0,0,0.4);
 }
-div.content cnt2>div.contentGrid>div.section>div.article>img{
+div.content.cnt2>div.contentGrid>div.section>div.article>img{
     width: 50%;
     height: 440px;
     overflow: hidden;
 }
-div.content cnt2>div.contentGrid>div.section>div.article>div.texts{
+div.content.cnt2>div.contentGrid>div.section>div.article>div.texts{
     width: 50%;
     background-color: #fff;
     padding: 80px calc(100% / 12);
     text-align: center;
 }
 /* 컨텐츠3 */
-div.content cnt3>div.contentGrid>div.section{
+div.content.cnt3>div.contentGrid>div.section{
     display: flex;
     column-gap: 20px;
 }
-div.content cnt3>div.contentGrid>div.section>div.article{
+div.content.cnt3>div.contentGrid>div.section>div.article{
     width: 25%;
 }
-div.content cnt3>div.contentGrid>div.section>div.article>img{
+div.content.cnt3>div.contentGrid>div.section>div.article>img{
     display: block;
     width: 100%;
     height: 200px;
