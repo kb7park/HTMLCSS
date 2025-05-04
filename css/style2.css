@@ -197,8 +197,8 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>
   z-index: 9999;
   left: 0;
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 1920px;
+  height: 1080px;
   background: rgba(0, 0, 0, 0.6);
   background-size: cover;
   background-position: center;
@@ -260,6 +260,106 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>
 
 .trophy-icon {
   width: 60px;
+  
   height: 60px;
   margin-bottom: 8px;
 }
+/* 기본 설정은 큰 화면용 (1920px 기준) */ 
+
+/* 반응형: 너비 980px 이하일 경우 */
+ /* @media (max-width: 980px) {
+  .k-league-teams {
+    width: 100%;
+    height: 100%;
+  }
+
+  .k-league-teams .overlap-group {
+    width: 100%;
+    height: 100%;
+  }
+
+  .k-league-teams .kleague-jpg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .k-league-teams .footer {
+    width: 100%;
+    height: 150px;
+    top: auto;
+    bottom: 0;
+  }
+
+  .k-league-teams .icons {
+    position: relative;
+    width: 100%;
+    top: auto;
+    left: auto;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .k-league-teams .element-lorem {
+    width: auto;
+    font-size: 18px;
+    left: auto;
+    top: auto;
+    text-align: center;
+    padding: 10px 0;
+  }
+
+  .k-league-teams .header {
+    width: 100%;
+    height: auto;
+    padding: 20px 0;
+  }
+
+  .k-league-teams .div {
+    width: 100%;
+    padding: 0 20px;
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .k-league-teams .frame {
+    position: relative;
+    left: auto;
+    top: auto;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .k-league-teams .content {
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .modal {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .modal-content {
+    width: 90%;
+    padding: 20px;
+  }
+
+  .trophy-list {
+    gap: 20px;
+    margin: 20px 0;
+  }
+
+  .trophy-item {
+    font-size: 18px;
+  }
+
+  .trophy-icon {
+    width: 40px;
+    height: 40px;
+  }
+} */
