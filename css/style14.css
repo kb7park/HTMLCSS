@@ -2,33 +2,33 @@ div.k-league-teams {
     position: relative;
     width: 1920px;
     height: 1080px;
-}
-
-.k-league-teams .overlap-group {
+  }
+  
+  .k-league-teams .overlap-group {
     position: relative;
     width: 1920px;
     height: 1080px;
-}
-
-.k-league-teams .kleague-jpg {
+  }
+  
+  .k-league-teams .anyangbackground {
     position: absolute;
     width: 1920px;
     height: 1080px;
     top: 0;
     left: 0;
     object-fit: cover;
-}
-
-.k-league-teams .footer {
+  }
+  
+  .k-league-teams .footer {
     position: absolute;
     width: 1920px;
     height: 170px;
     top: 910px;
     left: 0;
     background-color: transparent;
-}
-
-.k-league-teams .icons {
+  }
+  
+  .k-league-teams .icons {
     position: absolute;
     display: flex;
     justify-content: space-between;
@@ -38,9 +38,9 @@ div.k-league-teams {
     top: 113px;
     left: 752px;
     color: white;
-}
-
-.k-league-teams .element-lorem {
+  }
+  
+  .k-league-teams .element-lorem {
     position: absolute;
     width: 256px;
     height: 56px;
@@ -53,9 +53,9 @@ div.k-league-teams {
     text-align: center;
     letter-spacing: 0;
     line-height: 28px;
-}
-
-div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content {
+  }
+  
+  div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content {
     position: absolute;
     width: 1920px;
     height: 750px;
@@ -67,28 +67,31 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content {
     /* 세로 중앙 */
     height: 100vh;
     /* 화면 전체 높이 */
-}
-
-.k-league-teams .header {
+  }
+  
+  .k-league-teams .header {
     position: absolute;
     width: 1920px;
     height: 160px;
     top: 0;
     left: 0;
     background-color: transparent;
-}
-
-.k-league-teams .div {
+  }
+  
+  .k-league-teams .div {
     position: absolute;
-    width: 1471px;
-    height: 55px;
+    width: 1200px;
     top: 53px;
-    left: 320px;
-
-    display: flex;
-    justify-content: space-between;
-}
-.k-league-teams .div > div {
+    left: 360px;
+  
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6칸 */
+    grid-template-rows: repeat(2, auto);   /* 2줄 */
+    gap: 12px 16px;
+    justify-items: center;
+    align-items: center;
+  }
+  .k-league-teams .div > div {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 8px 12px;
     border-radius: 8px;
@@ -100,8 +103,8 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content {
     background-color: rgba(255, 255, 255, 0.25);
     transform: scale(1.05);
   }
-
-.k-league-teams .frame {
+  
+  .k-league-teams .frame {
     display: flex;
     flex-direction: column;
     width: 50px;
@@ -111,9 +114,9 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content {
     gap: 10px;
     padding: 10px;
     position: absolute;
-}
-
-div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.div>divframe>i {
+  }
+  
+  div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.div>divframe>i {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -123,18 +126,18 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
     align-self: stretch;
     width: 100%;
     flex: 0 0 auto;
-}
-
-.k-league-teams .group {
+  }
+  
+  .k-league-teams .group {
     position: relative;
     width: 26px;
     height: 22px;
     margin-top: -1.00px;
     margin-bottom: -1.00px;
     margin-left: -1.00px;
-}
-
-.k-league-teams .information-wrapper {
+  }
+  
+  .k-league-teams .information-wrapper {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -143,9 +146,9 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
     gap: 10px;
     padding: 10px;
     /* position: absolute; */
-}
-
-.k-league-teams .text-wrapper {
+  }
+  
+  .k-league-teams .text-wrapper {
     position: relative;
     width: fit-content;
     margin-top: -1.00px;
@@ -156,9 +159,9 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
     letter-spacing: 0;
     line-height: 28px;
     white-space: nowrap;
-}
-
-.k-league-teams .about-players-wrapper {
+  }
+  
+  .k-league-teams .about-players-wrapper {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -166,9 +169,9 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
     left: 735px;
     gap: 10px;
     padding: 10px;
-}
-
-.k-league-teams .k-league-teams-wrapper {
+  }
+  
+  .k-league-teams .k-league-teams-wrapper {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -176,9 +179,9 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
     left: 480px;
     gap: 10px;
     padding: 10px;
-}
-
-.k-league-teams .div-wrapper {
+  }
+  
+  .k-league-teams .div-wrapper {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -186,9 +189,9 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
     left: 255px;
     gap: 10px;
     padding: 10px;
-}
-
-.k-league-teams .footall-footprints-wrapper {
+  }
+  
+  .k-league-teams .footall-footprints-wrapper {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -196,17 +199,17 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.di
     left: 0;
     gap: 10px;
     padding: 10px;
-}
-
-.k-league-teams .h {
+  }
+  
+  .k-league-teams .h {
     position: absolute;
     width: 178px;
     height: 94px;
     top: 33px;
     left: 69px;
-}
-
-div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>i {
+  }
+  
+  div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>i {
     position: absolute;
     font-size: 31px;
     line-height: 38px;
@@ -215,9 +218,9 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>
     top: 28px;
     left: 0;
     color: white;
-}
-
-.k-league-teams .text-wrapper-2 {
+  }
+  
+  .k-league-teams .text-wrapper-2 {
     position: absolute;
     width: 120px;
     top: 0;
@@ -228,4 +231,4 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>
     font-size: 30px;
     letter-spacing: 0;
     line-height: normal;
-}
+  }
