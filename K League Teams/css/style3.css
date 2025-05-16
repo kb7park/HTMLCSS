@@ -1,230 +1,318 @@
 div.k-league-teams {
-  position: relative;
-  width: 1920px;
-  height: 1080px;
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+  }
+  
+  .k-league-teams .overlap-group {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+  }
+  
+  .k-league-teams .fcseoulbackground {
+    position: absolute;
+    width: 1920px;
+    height: 1080px;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+  }
+  
+  .k-league-teams .footer {
+    position: absolute;
+    width: 1920px;
+    height: 170px;
+    top: 910px;
+    left: 0;
+    background-color: transparent;
+  }
+  
+  .k-league-teams .icons {
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 242px;
+    height: 38px;
+    top: 113px;
+    left: 752px;
+    color: white;
+  }
+  
+  .k-league-teams .element-lorem {
+    position: absolute;
+    width: 256px;
+    height: 56px;
+    top: 37px;
+    left: 756px;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: 0;
+    line-height: 28px;
+  }
+  
+  div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content {
+    position: absolute;
+    width: 1920px;
+    height: 750px;
+    top: 160px;
+    display: flex;
+    justify-content: center;
+    /* 가로 중앙 */
+    align-items: center;
+    /* 세로 중앙 */
+    height: 100vh;
+    /* 화면 전체 높이 */
+  }
+  
+  .k-league-teams .header {
+    position: absolute;
+    width: 1920px;
+    height: 160px;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+  }
+  
+  .k-league-teams .div {
+    position: absolute;
+    width: 1200px;
+    top: 53px;
+    left: 360px;
+  
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6칸 */
+    grid-template-rows: repeat(2, auto);   /* 2줄 */
+    gap: 12px 16px;
+    justify-items: center;
+    align-items: center;
+  }
+  .k-league-teams .div > div {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+    cursor: pointer;
+  }
+  
+  .k-league-teams .div > div:hover {
+    background-color: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
+  }
+  
+  .k-league-teams .frame {
+    display: flex;
+    flex-direction: column;
+    width: 50px;
+    align-items: flex-start;
+    top: 0;
+    left: 1421px;
+    gap: 10px;
+    padding: 10px;
+    position: absolute;
+  }
+  
+  div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.div>divframe>i {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 2px;
+    position: relative;
+    align-self: stretch;
+    width: 100%;
+    flex: 0 0 auto;
+  }
+  
+  .k-league-teams .group {
+    position: relative;
+    width: 26px;
+    height: 22px;
+    margin-top: -1.00px;
+    margin-bottom: -1.00px;
+    margin-left: -1.00px;
+  }
+  
+  .k-league-teams .information-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 7px;
+    left: 985px;
+    gap: 10px;
+    padding: 10px;
+    /* position: absolute; */
+  }
+  
+  .k-league-teams .text-wrapper {
+    position: relative;
+    width: fit-content;
+    margin-top: -1.00px;
+    font-family: "Lato-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #ffffff;
+    font-size: 24px;
+    letter-spacing: 0;
+    line-height: 28px;
+    white-space: nowrap;
+  }
+  
+  .k-league-teams .about-players-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 7px;
+    left: 735px;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .k-league-teams .k-league-teams-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 7px;
+    left: 480px;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .k-league-teams .div-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 7px;
+    left: 255px;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .k-league-teams .footall-footprints-wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    top: 2px;
+    left: 0;
+    gap: 10px;
+    padding: 10px;
+  }
+  
+  .k-league-teams .h {
+    position: absolute;
+    width: 178px;
+    height: 94px;
+    top: 33px;
+    left: 69px;
+  }
+  
+  div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>i {
+    position: absolute;
+    font-size: 31px;
+    line-height: 38px;
+    width: 38px;
+    height: 38px;
+    top: 28px;
+    left: 0;
+    color: white;
+  }
+  
+  .k-league-teams .text-wrapper-2 {
+    position: absolute;
+    width: 120px;
+    top: 0;
+    left: 56px;
+    font-family: "Philosopher-Bold", Helvetica;
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 30px;
+    letter-spacing: 0;
+    line-height: normal;
+  }
+  /* 스크롤 가능한 콘텐츠 박스 */
+.scroll-container {
+  width: 1400px;
+  height: 700px;
+  overflow-y: auto;
+  padding-right: 10px;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-.k-league-teams .overlap-group {
-  position: relative;
-  width: 1920px;
-  height: 1080px;
+/* 스크롤 시 배경 고정 유지 */
+.scroll-container::-webkit-scrollbar {
+  width: 10px;
+}
+.scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+.scroll-container::-webkit-scrollbar-track {
+  background: transparent;
 }
 
-.k-league-teams .fcseoulbackground {
-  position: absolute;
-  width: 1920px;
-  height: 1080px;
-  top: 0;
-  left: 0;
-  object-fit: cover;
-}
-
-.k-league-teams .footer {
-  position: absolute;
-  width: 1920px;
-  height: 170px;
-  top: 910px;
-  left: 0;
-  background-color: transparent;
-}
-
-.k-league-teams .icons {
-  position: absolute;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 242px;
-  height: 38px;
-  top: 113px;
-  left: 752px;
-  color: white;
-}
-
-.k-league-teams .element-lorem {
-  position: absolute;
-  width: 256px;
-  height: 56px;
-  top: 37px;
-  left: 756px;
-  font-family: "Lato-SemiBold", Helvetica;
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 24px;
-  text-align: center;
-  letter-spacing: 0;
-  line-height: 28px;
-}
-
-div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content {
-  margin: 0 auto;
-}
-div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.content>div.header>h2{
-
-}
-
-.k-league-teams .header {
-  position: absolute;
-  width: 1920px;
-  height: 160px;
-  top: 0;
-  left: 0;
-  background-color: transparent;
-}
-
-.k-league-teams .div {
-  position: absolute;
-  width: 1200px;
-  top: 53px;
-  left: 360px;
-
+/* 콘텐츠 그리드 (세로 2행씩 정렬) */
+.contentgrid {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  /* 6칸 */
-  grid-template-rows: repeat(2, auto);
-  /* 2줄 */
-  gap: 12px 16px;
-  justify-items: center;
+  grid-template-rows: repeat(2, auto); /* 상하 2단 */
+  gap: 40px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* 각 콘텐츠 그룹 좌우로 정렬 */
+.artLeft,
+.artRight {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* 공통 콘텐츠 요소 간격 유지 */
+.artLeft .header1,
+.artLeft .section1,
+.artLeft .header2,
+.artLeft .section2,
+.artRight .header3,
+.artRight .section3,
+.artRight .section4 {
+  margin-bottom: 10px;
+}
+
+/* 아티클 기본 스타일 */
+.article {
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-.k-league-teams .div>div {
-  background-color: rgba(255, 255, 255, 0.1);
-  padding: 8px 12px;
-  border-radius: 8px;
-  transition: 0.3s;
-  cursor: pointer;
-}
-
-.k-league-teams .div>div:hover {
-  background-color: rgba(255, 255, 255, 0.25);
-  transform: scale(1.05);
-}
-
-.k-league-teams .frame {
-  display: flex;
-  flex-direction: column;
-  width: 50px;
-  align-items: flex-start;
-  top: 0;
-  left: 1421px;
-  gap: 10px;
-  padding: 10px;
-  position: absolute;
-}
-
-div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.div>divframe>i {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  padding: 2px;
-  position: relative;
-  align-self: stretch;
+.article img {
   width: 100%;
-  flex: 0 0 auto;
+  max-width: 200px;
+  border-radius: 10px;
 }
 
-.k-league-teams .group {
-  position: relative;
-  width: 26px;
-  height: 22px;
-  margin-top: -1.00px;
-  margin-bottom: -1.00px;
-  margin-left: -1.00px;
-}
-
-.k-league-teams .information-wrapper {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  top: 7px;
-  left: 985px;
-  gap: 10px;
-  padding: 10px;
-  /* position: absolute; */
-}
-
-.k-league-teams .text-wrapper {
-  position: relative;
-  width: fit-content;
-  margin-top: -1.00px;
-  font-family: "Lato-SemiBold", Helvetica;
-  font-weight: 600;
-  color: #ffffff;
-  font-size: 24px;
-  letter-spacing: 0;
-  line-height: 28px;
-  white-space: nowrap;
-}
-
-.k-league-teams .about-players-wrapper {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  top: 7px;
-  left: 735px;
-  gap: 10px;
-  padding: 10px;
-}
-
-.k-league-teams .k-league-teams-wrapper {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  top: 7px;
-  left: 480px;
-  gap: 10px;
-  padding: 10px;
-}
-
-.k-league-teams .div-wrapper {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  top: 7px;
-  left: 255px;
-  gap: 10px;
-  padding: 10px;
-}
-
-.k-league-teams .footall-footprints-wrapper {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  top: 2px;
+/* 배경 위 content 중앙 배치 */
+div.k-league-teams > div.overlap-group-wrapper > div.overlap-group > div.content {
+  position: absolute;
+  top: 160px;
   left: 0;
-  gap: 10px;
-  padding: 10px;
+  width: 100%;
+  height: calc(100vh - 160px - 170px); /* 헤더, 푸터 제외 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
-.k-league-teams .h {
-  position: absolute;
-  width: 178px;
-  height: 94px;
-  top: 33px;
-  left: 69px;
-}
-
-div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>i {
-  position: absolute;
-  font-size: 31px;
-  line-height: 38px;
-  width: 38px;
-  height: 38px;
-  top: 28px;
-  left: 0;
-  color: white;
-}
-
-.k-league-teams .text-wrapper-2 {
-  position: absolute;
-  width: 120px;
-  top: 0;
-  left: 56px;
-  font-family: "Philosopher-Bold", Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  font-size: 30px;
-  letter-spacing: 0;
-  line-height: normal;
+.section3 {
+  display: flex;
+  flex-direction: row;  /* 👉 가로 정렬로 변경 */
+  justify-content: center;
+  align-items: center;
+  gap: 40px;             /* 유니폼 사이 간격 */
 }
