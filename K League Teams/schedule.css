@@ -1,0 +1,82 @@
+body {
+      font-family: 'Noto Sans KR', sans-serif;
+      background-color: #f5f7fa;
+      padding: 40px;
+    }
+
+    .schedule-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      background: white;
+      padding: 30px 40px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      border-radius: 12px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-left: 6px solid #03c75a;
+      padding-left: 12px;
+      color: #222;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+
+    .tab-button {
+      padding: 10px 20px;
+      border: 1px solid #ccc;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    .tab-button.active {
+      background-color: #03c75a;
+      color: white;
+      border-color: #03c75a;
+    }
+
+    .search-box {
+      margin-bottom: 20px;
+    }
+
+    .search-box input {
+      padding: 10px;
+      width: 100%;
+      max-width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    .schedule-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: center;
+    }
+
+    .schedule-table thead {
+      background-color: #f1f3f5;
+    }
+
+    .schedule-table th,
+    .schedule-table td {
+      padding: 14px;
+      border-bottom: 1px solid #e0e0e0;
+      font-size: 16px;
+    }
+
+    .schedule-table img {
+      height: 24px;
+      vertical-align: middle;
+      margin-right: 6px;
+    }
+
+    .schedule-table tbody tr:hover {
+      background-color: #f9f9f9;
+    }
