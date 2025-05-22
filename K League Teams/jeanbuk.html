@@ -21,7 +21,7 @@
                         <a href="./fcseoulteam.html" class="team-link">FC서울</a>
                         <a href="./jeanbukteam.html" class="team-link">전북현대</a>
                         <a href="./suwonteam.html" class="team-link">수원FC</a>
-                        <a href="./ulsanteam.html" class="team-link">울산현대</a>
+                        <a href="ulsanteam.html" class="team-link">울산현대</a>
                         <a href="./anyangteam.html" class="team-link">안양FC</a>
                         <a href="./pohangteam.html" class="team-link">포항스틸러스</a>
                         <a href="./daeguteam.html" class="team-link">대구FC</a>
@@ -65,7 +65,7 @@
                     <h2>연도별 역사</h2>
 
                     <div class="year-tabs">
-                        <span class="year-tab active" data-year="1990">1990</span>
+                        <span class="year-tab" data-year="1990">1990</span>
                         <span class="year-tab" data-year="2000">2000</span>
                         <span class="year-tab" data-year="2010">2010</span>
                         <span class="year-tab" data-year="2020">2020</span>
@@ -153,6 +153,14 @@
                             <div class="timeline-content">
                                 구단하우스 준공<br>
                                 FA컵 우승(첫 메이저 대회 우승)
+                            </div>
+                        </div>
+                        <div class="timeline-item" data-year="2000">
+                            <div class="timeline-year">2006</div>
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                AFC 챔피언스리그 우승 (한국 최초 AFC 우승)<br>
+                                FIFA 클럽월드컵 참가
                             </div>
                         </div>
                         <div class="timeline-item" data-year="2000">
@@ -301,13 +309,6 @@
             </div>
         </div>
     </div>
-    <div id="playerModal" class="modal">
-        <div class="modal-content">
-            <span class="close-btn">&times;</span>
-            <h3 id="modal-year-title"></h3>
-            <div id="modal-player-info"></div>
-        </div>
-    </div>
 
     <!-- 타임라인 슬라이드 스크립트 -->
     <script>
@@ -315,19 +316,20 @@
             const timelineItems = document.querySelectorAll(".timeline-item");
             const yearTabs = document.querySelectorAll(".year-tab");
 
+            // 각 연도별 타임라인 필터 함수
             function filterTimeline(year) {
                 timelineItems.forEach(item => {
-                    if (item.getAttribute("data-year") === year) {
-                        item.style.display = "block";
-                    } else {
-                        item.style.display = "none";
-                    }
+                    const itemYear = item.getAttribute("data-year");
+                    item.style.display = (itemYear === year) ? "block" : "none";
                 });
             }
 
+            // 탭 클릭 시 active 클래스 처리 및 타임라인 필터링
             yearTabs.forEach(tab => {
                 tab.addEventListener("click", () => {
-                    document.querySelector(".year-tab.active").classList.remove("active");
+                    // 모든 탭에서 active 제거
+                    yearTabs.forEach(t => t.classList.remove("active"));
+                    // 현재 클릭한 탭에 active 추가
                     tab.classList.add("active");
 
                     const selectedYear = tab.getAttribute("data-year");
@@ -335,74 +337,57 @@
                 });
             });
 
-            function showTimeline(id) {
-                const wrappers = document.querySelectorAll('.timeline-wrapper');
-                wrappers.forEach(wrapper => {
-                    wrapper.querySelector('.timeline-slide').style.display = 'none';
-                });
-
-                const targetSlide = document.getElementById(id);
-                targetSlide.style.display = 'flex';
-            }
-
-            function scrollTimeline(id, distance) {
-                const el = document.getElementById(id);
-                el.scrollBy({
-                    left: distance,
-                    behavior: 'smooth'
-                });
-            }
-
-
-
-            // 초기화: 1990년대만 보이기
+            // 페이지 로드 시 초기화: 1990년대 타임라인만 보이게 설정
             filterTimeline("1990");
+            // 초기 탭 활성화
+            const initialTab = document.querySelector('.year-tab[data-year="1990"]');
+            if (initialTab) initialTab.classList.add("active");
         });
-        const modal = document.getElementById("playerModal");
-        const modalYearTitle = document.getElementById("modal-year-title");
-        const modalPlayerInfo = document.getElementById("modal-player-info");
-        const closeBtn = document.querySelector(".close-btn");
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("playerModal");
+            const modalYearTitle = document.getElementById("modal-year-title");
+            const modalPlayerInfo = document.getElementById("modal-player-info");
+            const closeBtn = document.querySelector(".close-btn");
 
-        const playerData = {
-            "1990": "🟢 주요 선수: 김상식, 박지호<br>🏅 특징: 창단 초기 주전 멤버 구성",
-            "2000": "🟢 주요 선수: 김도훈, 최태욱<br>🏅 특징: 첫 메이저 대회 우승을 이끈 멤버들",
-            "2010": "🟢 주요 선수: 이동국, 에닝요<br>🏅 특징: K리그 전성기의 핵심 득점원들",
-            "2020": "🟢 주요 선수: 송민규, 조규성<br>🏅 특징: 세대교체와 함께 다시 전성기를 노리는 주축들"
-        };
+            // 연도별 선수 정보
+            const playerData = {
+                "1990": "🟢 주요 선수: 김상식, 박지호<br>🏅 특징: 창단 초기 주전 멤버 구성",
+                "2000": "🟢 주요 선수: 김도훈, 최태욱<br>🏅 특징: 첫 메이저 대회 우승을 이끈 멤버들",
+                "2010": "🟢 주요 선수: 이동국, 에닝요<br>🏅 특징: K리그 전성기의 핵심 득점원들",
+                "2020": "🟢 주요 선수: 송민규, 조규성<br>🏅 특징: 세대교체와 함께 다시 전성기를 노리는 주축들"
+            };
 
-        document.querySelectorAll(".history-img").forEach(img => {
-            img.addEventListener("click", function () {
-                const year = this.getAttribute("data-year");
-                modal.style.display = "block";
-                modalYearTitle.textContent = ${year}년 주요 선수;
-                modalPlayerInfo.innerHTML = playerData[year] || "정보 없음";
+            // 이미지 클릭 시 모달 열기
+            document.querySelectorAll(".history-img").forEach(img => {
+                img.addEventListener("click", function () {
+                    const year = this.getAttribute("data-year");
+                    modal.style.display = "block";
+                    modalYearTitle.innerHTML = `${year}년 주요 선수`;
+                    modalPlayerInfo.innerHTML = playerData[year] || "⚠️ 정보 없음";
+                });
+            });
+
+            // 닫기 버튼 클릭 시 모달 닫기
+            closeBtn.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+
+            // 모달 바깥 클릭 시 닫기
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
             });
         });
-
-        closeBtn.onclick = function () {
-            modal.style.display = "none";
-        };
-
-        window.onclick = function (event) {
-            if (event.target === modal) {
-                modal.style.display = "none";
-            }
-        };
-        const leftBtn = document.querySelector('.left-btn');
-        const rightBtn = document.querySelector('.right-btn');
-        const slider = document.querySelector('.slider'); // 슬라이드 전체를 감싸는 요소
-        let currentX = 0;
-
-        rightBtn.addEventListener('click', () => {
-            currentX -= 290;
-            slider.style.transform = translateX(${currentX}px);
-        });
-
-        leftBtn.addEventListener('click', () => {
-            currentX += 290;
-            slider.style.transform = translateX(${currentX}px);
-        });
     </script>
+    <!-- 모달 창 -->
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-year-title"></h3>
+            <div id="modal-player-info"></div>
+        </div>
+    </div>
 
 
 </body>
