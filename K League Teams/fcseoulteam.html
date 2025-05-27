@@ -81,20 +81,180 @@
                         <div class="text-wrapper-2">Korea Football Guide</div>
                     </div>
                 </div>
-                <div class="content"></div>
-                <div class="footer">
-                    <div class="element-lorem">연락처:010-1234-5678<br />이메일:lorem</div>
-                    <div class="icons">
-                        <i class="fa-brands fa-facebook"></i>
-                        <i class="fa-brands fa-instagram"></i>
-                        <i class="fa-brands fa-twitter"></i>
-                        <i class="fa-brands fa-youtube"></i>
-                    </div>
-                </div>
+                <<!-- FC서울 이미지 히스토리 섹션 -->
+                    <section class="fcseoul-history">
+                        <h2 class="history-title">FC SEOUL<br>FOOTBALL CLUB HISTORY</h2>
+                        <div class="history-container">
+                            <div class="history-item">
+                                <div class="year">1990</div>
+                                <img src="./images/fcseoul_1990.png" alt="1990 Player" class="history-img"
+                                    data-year="1990">
+                            </div>
+                            <div class="history-item">
+                                <div class="year">2000</div>
+                                <img src="./images/fcseoul_2000.png" alt="2000 Player" class="history-img"
+                                    data-year="2000">
+                            </div>
+                            <div class="history-item">
+                                <div class="year">2010</div>
+                                <img src="./images/fcseoul_2010.png" alt="2010 Player" class="history-img"
+                                    data-year="2010">
+                            </div>
+                            <div class="history-item">
+                                <div class="year">2020</div>
+                                <img src="./images/fcseoul_2020.png" alt="2020 Player" class="history-img"
+                                    data-year="2020">
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 연도별 타임라인 -->
+                    <section class="timeline-section">
+                        <h2>연도별 역사</h2>
+
+                        <div class="year-tabs">
+                            <span class="year-tab" data-year="1990">1990</span>
+                            <span class="year-tab" data-year="2000">2000</span>
+                            <span class="year-tab" data-year="2010">2010</span>
+                            <span class="year-tab" data-year="2020">2020</span>
+                        </div>
+
+                        <div class="slider-buttons">
+                            <button class="slider-btn left-btn">←</button>
+                            <button class="slider-btn right-btn">→</button>
+                        </div>
+
+                        <div class="timeline">
+                            <div class="timeline-item" data-year="1990">
+                                <div class="timeline-year">1990</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">LG 치타스 창단</div>
+                            </div>
+                            <div class="timeline-item" data-year="1990">
+                                <div class="timeline-year">1996</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">서울에서 안양으로 연고 이전</div>
+                            </div>
+                            <div class="timeline-item" data-year="2000">
+                                <div class="timeline-year">2004</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">서울로 연고지 복귀, FC서울로 팀명 변경</div>
+                            </div>
+                            <div class="timeline-item" data-year="2010">
+                                <div class="timeline-year">2010</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">K리그 통합우승<br>감독 넬로 빙가다</div>
+                            </div>
+                            <div class="timeline-item" data-year="2010">
+                                <div class="timeline-year">2012</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">K리그 우승<br>주포: 데얀, 몰리나</div>
+                            </div>
+                            <div class="timeline-item" data-year="2020">
+                                <div class="timeline-year">2023</div>
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-content">K리그 상위 스플릿 진출<br>젊은 선수 중심 전환</div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 하단 푸터 -->
+                    <footer class="footer">
+                        <div class="contact-info">
+                            연락처: 010-1234-5678<br>
+                            이메일: lorem@example.com
+                        </div>
+                        <div class="social-icons">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-twitter"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                    </footer>
             </div>
         </div>
     </div>
+
+    <!-- 타임라인 슬라이드 스크립트 -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const timelineItems = document.querySelectorAll(".timeline-item");
+            const yearTabs = document.querySelectorAll(".year-tab");
+
+            // 각 연도별 타임라인 필터 함수
+            function filterTimeline(year) {
+                timelineItems.forEach(item => {
+                    const itemYear = item.getAttribute("data-year");
+                    item.style.display = (itemYear === year) ? "block" : "none";
+                });
+            }
+
+            // 탭 클릭 시 active 클래스 처리 및 타임라인 필터링
+            yearTabs.forEach(tab => {
+                tab.addEventListener("click", () => {
+                    // 모든 탭에서 active 제거
+                    yearTabs.forEach(t => t.classList.remove("active"));
+                    // 현재 클릭한 탭에 active 추가
+                    tab.classList.add("active");
+
+                    const selectedYear = tab.getAttribute("data-year");
+                    filterTimeline(selectedYear);
+                });
+            });
+
+            // 페이지 로드 시 초기화: 1990년대 타임라인만 보이게 설정
+            filterTimeline("1990");
+            // 초기 탭 활성화
+            const initialTab = document.querySelector('.year-tab[data-year="1990"]');
+            if (initialTab) initialTab.classList.add("active");
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("playerModal");
+            const modalYearTitle = document.getElementById("modal-year-title");
+            const modalPlayerInfo = document.getElementById("modal-player-info");
+            const closeBtn = document.querySelector(".close-btn");
+
+            // 연도별 선수 정보
+            const playerData = {
+                "1990": "🟥 주요 선수: 고정운, 조긍연<br>🏅 특징: 초창기 LG 치타스 시절",
+                "2000": "🟥 주요 선수: 최용수, 박주영<br>🏅 특징: 안양 시절과 서울 복귀 시기",
+                "2010": "🟥 주요 선수: 데얀, 아디, 몰리나<br>🏅 특징: 우승 전성기 주축들",
+                "2020": "🟥 주요 선수: 나상호, 기성용<br>🏅 특징: 리빌딩과 변화 시도"
+            };
+
+            // 이미지 클릭 시 모달 열기
+            document.querySelectorAll(".history-img").forEach(img => {
+                img.addEventListener("click", function () {
+                    const year = this.getAttribute("data-year");
+                    modal.style.display = "block";
+                    modalYearTitle.innerHTML = `${year}년 주요 선수`;
+                    modalPlayerInfo.innerHTML = playerData[year] || "⚠️ 정보 없음";
+                });
+            });
+
+            // 닫기 버튼 클릭 시 모달 닫기
+            closeBtn.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+
+            // 모달 바깥 클릭 시 닫기
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
+    </script>
+    <!-- 모달 창 -->
+    <div id="playerModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn">&times;</span>
+            <h3 id="modal-year-title"></h3>
+            <div id="modal-player-info"></div>
+        </div>
     </div>
+
+
 </body>
 
 </html>

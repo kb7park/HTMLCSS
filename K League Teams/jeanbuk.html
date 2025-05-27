@@ -379,6 +379,29 @@
                 }
             });
         });
+        const timeline = document.querySelector('.timeline');
+        const arrowLeft = document.getElementById('arrowLeft');
+        const arrowRight = document.getElementById('arrowRight');
+
+        // 카드 하나의 너비 구하기
+        const card = document.querySelector('.timeline-item');
+        const cardWidth = card.offsetWidth + 20; // 마진 고려
+
+        // 오른쪽으로 스크롤
+        arrowRight.addEventListener('click', () => {
+            timeline.scrollBy({
+                left: cardWidth,
+                behavior: 'smooth'
+            });
+        });
+
+        // 왼쪽으로 스크롤
+        arrowLeft.addEventListener('click', () => {
+            timeline.scrollBy({
+                left: -cardWidth,
+                behavior: 'smooth'
+            });
+        });
     </script>
     <!-- 모달 창 -->
     <div id="playerModal" class="modal">
