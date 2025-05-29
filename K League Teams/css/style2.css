@@ -203,6 +203,7 @@ div.k-league-teams>div.overlap-group-wrapper>div.overlap-group>div.header>div.h>
   color: #ffffff;
   font-size: 30px;
   line-height: normal;
+  cursor: pointer;
 }
 
 /* 모달 전체 배경 및 중앙화 */
