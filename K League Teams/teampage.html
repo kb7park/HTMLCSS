@@ -291,8 +291,9 @@
 
             kakao.maps.event.addListener(marker, 'click', function () {
                 modal.style.display = 'block';
-                modal.style.backgroundImage = `url(${pos.background})`;
+                modal.classList.remove('hidden');
                 modalTitle.textContent = pos.title;
+                modal.style.backgroundImage = `url(${pos.background})`;
                 kleagueCount.textContent = pos.trophies.kleague;
                 facupCount.textContent = pos.trophies.fa;
                 aclCount.textContent = pos.trophies.acl;

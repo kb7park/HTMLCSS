@@ -21,7 +21,7 @@ body {
   position: absolute;
   top: 0;
   z-index: -1;
-  opacity: 0.15;
+  opacity: 0.1;
 }
 
 /* 헤더 */
@@ -209,9 +209,10 @@ body {
 
 .history-item img {
   width: 180px;
-  height: auto;
+  height: 270px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
 }
 
 /* 푸터 */
