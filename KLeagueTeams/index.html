@@ -1,89 +1,306 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/11.8.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/11.8.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/11.8.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/11.8.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/11.8.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/11.8.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/11.8.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/11.8.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/11.8.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/11.8.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
-
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
-    </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
-
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
+<head>
+    <meta charset="utf-8" />
+    <title>Korea Football Guide</title>
+    <link rel="stylesheet" href="./css/globals2.css" />
+    <link rel="stylesheet" href="./css/style2.css" />
+    <link rel="stylesheet" href="./css/all.min.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=ece1495bb892f84bb6791401ee1157d0">
     </script>
-  </body>
+</head>
+
+<body>
+    <div class="k-league-teams">
+        <div class="overlap-group-wrapper">
+            <div class="overlap-group">
+                <img class="kleague-jpg" src="./images/kleaugeblur.webp" />
+                <div class="header">
+                    <div class="div">
+                        <div class="information-wrapper">
+                            <div class="text-wrapper">AI Service</div>
+                        </div>
+                        <div class="about-players-wrapper">
+                            <div class="text-wrapper">About Players</div>
+                        </div>
+                        <div class="k-league-teams-wrapper">
+                            <div class="text-wrapper">K League Teams</div>
+                        </div>
+                        <div class="div-wrapper">
+                            <div class="text-wrapper">Rules</div>
+                        </div>
+                        <div class="footall-footprints-wrapper">
+                            <div class="text-wrapper">Message</div>
+                        </div>
+                        <div class="footall-footprints-wrapper">
+                            <div class="text-wrapper">Physics</div>
+                        </div>
+                        <div class="footall-footprints-wrapper">
+                            <div class="text-wrapper">Quiz</div>
+                        </div>
+                    </div>
+                    <div class="h">
+                        <i class="fa-solid fa-futbol"></i>
+                        <div class="text-wrapper-2">Korea Football Guide</div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div id="map" style="width:50%; height: 600px; margin: 0 auto;"></div>
+                </div>
+                <div class="footer">
+                    <div class="element-lorem">연락처:010-1234-5678<br />이메일:lorem</div>
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-twitter"></i>
+                        <i class="fa-brands fa-youtube"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 모달창 -->
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span id="modal-close" class="close">&times;</span>
+            <div class="modal-text">
+                <h2 id="modal-title"></h2>
+                <div class="trophy-list">
+                    <div class="trophy-item">
+                        <img src="./images/k-league.png" class="trophy-icon" alt="K리그" />
+                        <span id="kleague-count"></span>
+                    </div>
+                    <div class="trophy-item">
+                        <img src="./images/facup.png" class="trophy-icon" alt="FA컵" />
+                        <span id="facup-count"></span>
+                    </div>
+                    <div class="trophy-item">
+                        <img src="./images/championsleage.png" class="trophy-icon" alt="ACL" />
+                        <span id="acl-count"></span>
+                    </div>
+                </div>
+                <a id="team-link" href="#" target="_blank">자세히 보기 &raquo;</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        var mapContainer = document.getElementById('map'), // 지도를 표시할 div  
+            mapOption = {
+                center: new kakao.maps.LatLng(35.75, 128.15), // 지도의 중심좌표
+                level: 13 // 지도의 확대 레벨
+            };
+
+        var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+        // 마커를 표시할 위치와 title 객체 배열입니다 
+        var positions = [{
+                Team: 'FC서울',
+                title: '홈구장: 서울상암월드컵경기장',
+                latlng: new kakao.maps.LatLng(37.5683, 126.8972),
+                imageSrc: './images/seoul.png',
+                background: './images/seoulworldcupstadium.jpg',
+                trophies: {
+                    kleague: 6,
+                    fa: 2,
+                    acl: 0
+                },
+                link: './fcseoulteam.html'
+            },
+            {
+                title: '홈구장: 울산문수경기장',
+                latlng: new kakao.maps.LatLng(35.5354, 129.2597),
+                imageSrc: './images/ulsan.png',
+                background: './images/ulsanstadium.jpg',
+                trophies: {
+                    kleague: 3,
+                    fa: 1,
+                    acl: 2
+                },
+                link: './ulsanteam.html'
+            },
+            {
+                title: '홈구장: 전북전주월드컵경기장',
+                latlng: new kakao.maps.LatLng(35.8668, 127.1266),
+                imageSrc: './images/jeonbuk.png',
+                background: './images/jeanbukstadium.jpg',
+                trophies: {
+                    kleague: 9,
+                    fa: 4,
+                    acl: 2
+                },
+                link: './jeanbuk.html'
+            },
+            {
+                title: '홈구장: 포항스틸야드경기장',
+                latlng: new kakao.maps.LatLng(36.0190, 129.3435),
+                imageSrc: './images/pohang.png',
+                background: './images/pohangstadium.jpeg',
+                trophies: {
+                    kleague: 5,
+                    fa: 5,
+                    acl: 3
+                },
+                link: './pohangteam.html'
+            },
+            {
+                title: '홈구장: 수원종합운동장',
+                latlng: new kakao.maps.LatLng(37.2860, 127.0156),
+                imageSrc: './images/suwon.png',
+                background: './images/suwonstadium.jpeg',
+                trophies: {
+                    kleague: 0,
+                    fa: 0,
+                    acl: 0
+                },
+                link: './suwonteam.html'
+            },
+            {
+                title: '홈구장: DGB대구은행파크',
+                latlng: new kakao.maps.LatLng(35.8804, 128.5856),
+                imageSrc: './images/daegu.png',
+                background: './images/daegustadium.jpg',
+                trophies: {
+                    kleague: 0,
+                    fa: 1,
+                    acl: 0
+                },
+                link: './daeguteam.html'
+            },
+            {
+                title: '홈구장: 대전월드컵경기장',
+                latlng: new kakao.maps.LatLng(36.3216, 127.4289),
+                imageSrc: './images/daejeon.png',
+                background: './images/daejeonstadium.png',
+                trophies: {
+                    kleague: 0,
+                    fa: 0,
+                    acl: 0
+                },
+                link: './daejeonteam.html'
+            },
+            {
+                title: '홈구장: 광주축구전용구장',
+                latlng: new kakao.maps.LatLng(35.1333, 126.9020),
+                imageSrc: './images/gwangju.png',
+                background: './images/gwangjustadium.webp',
+                trophies: {
+                    kleague: 0,
+                    fa: 0,
+                    acl: 0
+                },
+                link: './gwangjuteam.html'
+            },
+            {
+                title: '홈구장: 춘천송암레포츠타운',
+                latlng: new kakao.maps.LatLng(37.8478, 127.7144),
+                imageSrc: './images/gangwon.png',
+                background: './images/gangwonstadium.webp',
+                trophies: {
+                    kleague: 0,
+                    fa: 0,
+                    acl: 0
+                },
+                link: './gangwonteam.html'
+            },
+            {
+                title: '홈구장: 제주월드컵경기장',
+                latlng: new kakao.maps.LatLng(33.2463, 126.5097),
+                imageSrc: './images/jeju.png',
+                background: './images/jejustadium.webp',
+                trophies: {
+                    kleague: 0,
+                    fa: 0,
+                    acl: 0
+                },
+                link: './jejuteam.html'
+            },
+            {
+                title: '홈구장: 안양종합운동장',
+                latlng: new kakao.maps.LatLng(37.4053, 126.9466),
+                imageSrc: './images/anyang.png',
+                background: './images/anyangstadium.webp',
+                trophies: {
+                    kleague: 0,
+                    fa: 0,
+                    acl: 0
+                },
+                link: './anyangteam.html'
+            },
+            {
+                title: '홈구장: 김천종합운동장',
+                latlng: new kakao.maps.LatLng(36.1397, 128.0865),
+                imageSrc: './images/gimcheon.png',
+                background: './images/kimcheonstadium.webp',
+                trophies: {
+                    kleague: 0,
+                    fa: 0,
+                    acl: 0
+                },
+                link: './kimcheonteam.html'
+            },
+
+        ];
+
+        for (var i = 0; i < positions.length; i++) {
+
+            // 마커 이미지의 이미지 크기 입니다
+            var imageSize = new kakao.maps.Size(25, 25);
+
+            // 마커 이미지를 생성합니다    
+            var markerImage = new kakao.maps.MarkerImage(positions[i].imageSrc, imageSize);
+
+            // 마커를 생성합니다
+            var marker = new kakao.maps.Marker({
+                map: map, // 마커를 표시할 지도
+                position: positions[i].latlng, // 마커를 표시할 위치
+                title: positions[i].title, // 마커의 타이틀, 마커에 마우스를 올리면 타이틀이 표시됩니다
+                image: markerImage // 마커 이미지 
+            });
+        }
+        // 모달 요소
+        const modal = document.getElementById('modal');
+        const modalTitle = document.getElementById('modal-title');
+        const modalClose = document.getElementById('modal-close');
+        const kleagueCount = document.getElementById('kleague-count');
+        const facupCount = document.getElementById('facup-count');
+        const aclCount = document.getElementById('acl-count');
+        const teamLink = document.getElementById('team-link');
+
+        // 닫기
+        modalClose.onclick = () => {
+            modal.style.display = 'none';
+            modal.style.backgroundImage = '';
+        };
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+                modal.style.backgroundImage = '';
+            }
+        }
+
+        // 마커 생성 및 클릭 이벤트 등록
+        for (let i = 0; i < positions.length; i++) {
+            const pos = positions[i];
+            const marker = new kakao.maps.Marker({
+                map: map,
+                position: pos.latlng,
+                title: pos.title,
+                image: new kakao.maps.MarkerImage(pos.imageSrc, new kakao.maps.Size(25, 25))
+            });
+
+            kakao.maps.event.addListener(marker, 'click', function () {
+                modal.style.display = 'block';
+                modal.classList.remove('hidden');
+                modalTitle.textContent = pos.title;
+                modal.style.backgroundImage = `url(${pos.background})`;
+                kleagueCount.textContent = pos.trophies.kleague;
+                facupCount.textContent = pos.trophies.fa;
+                aclCount.textContent = pos.trophies.acl;
+                teamLink.href = pos.link;
+            });
+        }
+    </script>
+</body>
+
 </html>
