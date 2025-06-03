@@ -24,7 +24,7 @@
                             </a>
                         </div>
                         <div class="Team2">
-                            <a href="./jeanbuk.html">
+                            <a href="./jeanbukteam.html">
                                 <div class="text-wrapper">전북현대</div>
                             </a>
                         </div>
@@ -70,7 +70,7 @@
                         </div>
                         <div class="Team11">
                             <a href="./jejuteam.html">
-                                <div class="text-wrapper">제주FC</div>
+                                <div class="text-wrapper">제주유나이티드</div>
                             </a>
                         </div>
                         <div class="Team12">
@@ -428,29 +428,43 @@
                 }
             });
         });
-        const timeline = document.querySelector('.timeline');
-        const arrowLeft = document.getElementById('arrowLeft');
-        const arrowRight = document.getElementById('arrowRight');
+        document.addEventListener("DOMContentLoaded", function () {
+            const timelineItems = document.querySelectorAll(".timeline-item");
+            const yearTabs = document.querySelectorAll(".year-tab");
+            const timeline = document.querySelector(".timeline");
+            const leftBtn = document.querySelector(".left-btn");
+            const rightBtn = document.querySelector(".right-btn");
 
-        // 카드 하나의 너비 구하기
-        const card = document.querySelector('.timeline-item');
-        const cardWidth = card.offsetWidth + 20; // 마진 고려
-
-        // 오른쪽으로 스크롤
-        arrowRight.addEventListener('click', () => {
-            timeline.scrollBy({
-                left: cardWidth,
-                behavior: 'smooth'
-            });
+        function filterTimeline(year) {
+            timelineItems.forEach(item => {
+            const itemYear = item.getAttribute("data-year");
+            item.style.display = (itemYear === year) ? "inline-block" : "none";
         });
+    }
 
-        // 왼쪽으로 스크롤
-        arrowLeft.addEventListener('click', () => {
-            timeline.scrollBy({
-                left: -cardWidth,
-                behavior: 'smooth'
-            });
-        });
+        yearTabs.forEach(tab => {
+            tab.addEventListener("click", () => {
+            const year = tab.getAttribute("data-year");
+            filterTimeline(year);
+
+        yearTabs.forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+
+            timeline.scrollLeft = 0; // 좌측 정렬
+      });
+    });
+
+    leftBtn.addEventListener("click", () => {
+      timeline.scrollBy({ left: -300, behavior: "smooth" });
+    });
+
+    rightBtn.addEventListener("click", () => {
+      timeline.scrollBy({ left: 300, behavior: "smooth" });
+    });
+
+    // 초기 필터링
+    filterTimeline("1990");
+  });
     </script>
     <!-- 모달 창 -->
     <div id="playerModal" class="modal">
